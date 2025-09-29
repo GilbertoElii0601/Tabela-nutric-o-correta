@@ -1,14 +1,15 @@
 //muda o nome a partir do seletor classe
-var pacientes = document.querySelector(".subtitulo");
+var subtitulo = document.querySelector(".subtitulo");
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Betin Nutricionista🥸";
 subtitulo.textContent = "Meus pacientes";
 
 
 //acessar a tag tr - paciente Paulo
-var paciente = document.querySelectorAll(".paciente");
+var pacientes = document.querySelectorAll(".paciente");
 
-for(var 1 = 0; 1 < paciente.length; 1++){
+for(var i = 0; i < pacientes.length; i++){
+    var paciente = pacientes[i];
 //seleciona o conteudo da tag
 var tdPeso = paciente.querySelector(".info-peso");
 var peso = tdPeso.textContent;
@@ -41,4 +42,8 @@ if(altura < 0 || altura > 3.00){
 }
 }
     
-
+//quando clicar no no titulo aparece mensagem
+titulo.addEventListener("click", mostreMensagem);
+function mostreMensagem(){
+    alert ("Este elemento foi clicado");
+}
