@@ -31,7 +31,7 @@ var alturaValido = true;
 tdImc.textContent = "Altura Invalida";
 
 //define limites do de oesi e altura
-if(peso < 0 || peso > 1000){
+if(peso < 0 || peso > 100){
     alert("peso pesado");
     var pesoValido = false;
 }
@@ -79,9 +79,13 @@ alturaTd.textContent = altura;
 gorduraTd.textContent = gordura;
 imcTd.textContent = imc;
 
+//adiciona as tags na tela do usuario
+pacienteTr.appendChild(nomeTd);
+pacienteTr.appendChild(pesoTd);
+pacienteTr.appendChild(alturaTd);
+pacienteTr.appendChild(gorduraTd);
+pacienteTr.appendChild(imcTd);
 
-});
-
-
-
-
+var tabela = document.querySelector("#tabela-paciente");
+tabela.appendChild(#paciente);
+})
